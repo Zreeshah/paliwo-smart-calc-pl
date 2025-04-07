@@ -23,6 +23,24 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Logo />
             
             <div className="hidden md:flex space-x-6">
+              <Link to="/cena-paliwa" className="text-gray-600 hover:text-brand-green">
+                Cena Paliwa
+              </Link>
+              <Link to="/paliwa-premium" className="text-gray-600 hover:text-brand-green">
+                Paliwa Premium
+              </Link>
+              <Link to="/diesel" className="text-gray-600 hover:text-brand-green">
+                Diesel
+              </Link>
+              <Link to="/lpg" className="text-gray-600 hover:text-brand-green">
+                LPG
+              </Link>
+              <Link to="/hybryda" className="text-gray-600 hover:text-brand-green">
+                Hybryda
+              </Link>
+              <Link to="/ekonomiczna-jazda" className="text-gray-600 hover:text-brand-green">
+                Ekonomiczna Jazda
+              </Link>
               <Link to="/polityka-prywatnosci" className="text-gray-600 hover:text-brand-green">
                 Polityka Prywatności
               </Link>
@@ -43,6 +61,48 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {isMenuOpen && (
             <div className="md:hidden mt-4 py-2 border-t animate-fade-in">
               <div className="flex flex-col space-y-3">
+                <Link 
+                  to="/cena-paliwa" 
+                  className="text-gray-600 hover:text-brand-green py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Cena Paliwa
+                </Link>
+                <Link 
+                  to="/paliwa-premium" 
+                  className="text-gray-600 hover:text-brand-green py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Paliwa Premium
+                </Link>
+                <Link 
+                  to="/diesel" 
+                  className="text-gray-600 hover:text-brand-green py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Diesel
+                </Link>
+                <Link 
+                  to="/lpg" 
+                  className="text-gray-600 hover:text-brand-green py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  LPG
+                </Link>
+                <Link 
+                  to="/hybryda" 
+                  className="text-gray-600 hover:text-brand-green py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Hybryda
+                </Link>
+                <Link 
+                  to="/ekonomiczna-jazda" 
+                  className="text-gray-600 hover:text-brand-green py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Ekonomiczna Jazda
+                </Link>
                 <Link 
                   to="/polityka-prywatnosci" 
                   className="text-gray-600 hover:text-brand-green py-2"
@@ -77,7 +137,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 © 2025 Kalkulator Spalania Paliwa
               </p>
             </div>
-            <div className="flex space-x-6">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <Link to="/cena-paliwa" className="text-sm text-gray-600 hover:text-brand-green">
+                Cena Paliwa
+              </Link>
+              <Link to="/paliwa-premium" className="text-sm text-gray-600 hover:text-brand-green">
+                Paliwa Premium
+              </Link>
+              <Link to="/diesel" className="text-sm text-gray-600 hover:text-brand-green">
+                Diesel
+              </Link>
+              <Link to="/lpg" className="text-sm text-gray-600 hover:text-brand-green">
+                LPG
+              </Link>
+              <Link to="/hybryda" className="text-sm text-gray-600 hover:text-brand-green">
+                Hybryda
+              </Link>
+              <Link to="/ekonomiczna-jazda" className="text-sm text-gray-600 hover:text-brand-green">
+                Ekonomiczna Jazda
+              </Link>
               <Link to="/polityka-prywatnosci" className="text-sm text-gray-600 hover:text-brand-green">
                 Polityka Prywatności
               </Link>

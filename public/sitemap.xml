@@ -8,6 +8,42 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://kalkulator-spalaniapaliwa.pl/cena-paliwa</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kalkulator-spalaniapaliwa.pl/paliwa-premium</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kalkulator-spalaniapaliwa.pl/diesel</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kalkulator-spalaniapaliwa.pl/lpg</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kalkulator-spalaniapaliwa.pl/hybryda</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kalkulator-spalaniapaliwa.pl/ekonomiczna-jazda</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kalkulator-spalaniapaliwa.pl/polityka-prywatnosci</loc>
     <lastmod>2025-04-07</lastmod>
     <changefreq>yearly</changefreq>

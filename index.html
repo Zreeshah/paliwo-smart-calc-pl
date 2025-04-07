@@ -10,6 +10,16 @@
     
     <!-- Canonical Tag -->
     <link rel="canonical" href="https://kalkulator-spalaniapaliwa.pl" />
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var canonical = document.querySelector("link[rel='canonical']");
+    if (canonical) {
+      canonical.setAttribute("href", window.location.href);
+    }
+  });
+</script>
+
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Kalkulator Spalania Paliwa – Oblicz Zużycie i Koszty" />

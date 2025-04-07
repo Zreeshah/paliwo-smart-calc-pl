@@ -1,26 +1,26 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
+import { getImagePath } from '@/utils/imagePaths';
 
 const Diesel = () => {
   return (
     <>
       <Helmet>
-        <title>Porównanie Silników: Diesel vs Benzyna - Który Lepszy?</title>
-        <meta name="description" content="Porównanie silników diesel i benzynowych. Dowiedz się, który silnik jest bardziej ekonomiczny, trwały i tańszy w utrzymaniu." />
-        <link rel="canonical" href="https://kalkulator-spalaniapaliwa.pl/diesel" />
+        <title>Diesel vs Benzyna – Co Wybrać i Kiedy Się Opłaca?</title>
+        <meta name="description" content="Porównanie silników diesla i benzynowych. Dowiedz się, kiedy warto wybrać diesel, a kiedy lepszą opcją będzie silnik benzynowy. Koszty eksploatacji i różnice." />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/diesel" />
       </Helmet>
       
       <Layout>
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">Porównanie Silników: Diesel vs Benzyna - Który Lepszy?</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-6">Diesel vs Benzyna – Co Wybrać i Kiedy Się Opłaca?</h1>
           
           <div className="my-8">
             <img 
-              src="/lovable-uploads/diesel-vs-gasoline.jpg" 
-              alt="Porównanie Silników: Diesel vs Benzyna" 
+              src={getImagePath("diesel-engine.jpg")} 
+              alt="Silnik Diesla - porównanie z silnikiem benzynowym" 
               className="mx-auto max-w-full h-auto rounded-lg shadow-md" 
             />
           </div>

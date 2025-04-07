@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
+import { getImagePath } from '@/utils/imagePaths';
 
 const LPG = () => {
   return (
@@ -10,7 +11,7 @@ const LPG = () => {
       <Helmet>
         <title>Co to jest LPG? Wszystko o Płynnym Paliwie Gazowym</title>
         <meta name="description" content="Dowiedz się wszystkiego o LPG - składzie, właściwościach, zaletach i zastosowaniu płynnego paliwa gazowego. Czy warto zainwestować w instalację LPG?" />
-        <link rel="canonical" href="https://kalkulator-spalaniapaliwa.pl/lpg" />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/lpg" />
       </Helmet>
       
       <Layout>
@@ -19,7 +20,7 @@ const LPG = () => {
           
           <div className="my-8">
             <img 
-              src="/lovable-uploads/lpg-fuel.jpg" 
+              src={getImagePath("lpg-fuel.jpg")} 
               alt="Co to jest LPG?" 
               className="mx-auto max-w-full h-auto rounded-lg shadow-md" 
             />

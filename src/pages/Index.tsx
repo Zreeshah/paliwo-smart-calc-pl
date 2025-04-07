@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 import FuelConsumptionCalculator from '@/components/FuelConsumptionCalculator';
 import FuelCostCalculator from '@/components/FuelCostCalculator';
 import FAQSection from '@/components/FAQSection';
-import FuelInfoContent from '@/components/FuelInfoContent'; // Change from HomeContent to FuelInfoContent
+import FuelInfoContent from '@/components/FuelInfoContent';
 
 const Index = () => {
   const schemaData = {
@@ -36,6 +36,7 @@ const Index = () => {
       <Helmet>
         <title>Kalkulator Spalania Paliwa – Oblicz Zużycie i Koszty</title>
         <meta name="description" content="Sprawdź zużycie paliwa i koszty podróży z naszym kalkulatorem spalania paliwa. Prosty, szybki i dokładny – oblicz paliwo już teraz!" />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/" />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>

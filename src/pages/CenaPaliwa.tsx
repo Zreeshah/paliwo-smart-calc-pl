@@ -1,16 +1,16 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
+import { getImagePath } from '@/utils/imagePaths';
 
 const CenaPaliwa = () => {
   return (
     <>
       <Helmet>
         <title>Od Czego Zależy Cena Paliwa? Poznaj Kluczowe Czynniki</title>
-        <meta name="description" content="Sprawdź, jakie czynniki wpływają na cenę paliwa w Polsce. Podatki, ceny ropy, marże - poznaj wszystkie elementy kształtujące koszt benzyny, diesla i LPG." />
-        <link rel="canonical" href="https://kalkulator-spalaniapaliwa.pl/cena-paliwa" />
+        <meta name="description" content="Dowiedz się, od czego zależy cena paliwa w Polsce. Poznaj czynniki wpływające na ceny benzyny, diesla i LPG oraz jak możesz zaoszczędzić na tankowaniu." />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/cena-paliwa" />
       </Helmet>
       
       <Layout>
@@ -19,137 +19,134 @@ const CenaPaliwa = () => {
           
           <div className="my-8">
             <img 
-              src="/lovable-uploads/fuel-price-factors.jpg" 
-              alt="Od Czego Zależy Cena Paliwa" 
+              src={getImagePath("fuel-price.jpg")} 
+              alt="Od Czego Zależy Cena Paliwa?" 
               className="mx-auto max-w-full h-auto rounded-lg shadow-md" 
             />
           </div>
           
           <h2 className="text-2xl font-semibold mt-10 mb-4">Jakie Czynniki Kształtują Cenę Paliwa na Stacjach w Polsce?</h2>
-          <p className="mb-4"><strong>Cena paliwa</strong> na stacjach benzynowych w Polsce nie jest przypadkowa – zależy od szeregu czynników, które wpływają na to, ile płacisz za litr benzyny, diesla czy LPG. Zrozumienie tych elementów pozwoli Ci lepiej planować <strong>koszty paliwa</strong> i korzystać z narzędzi takich jak nasz <strong>kalkulator kosztów paliwa</strong>. Oto, co decyduje o cenie paliwa:</p>
+          <p className="mb-6">Cena paliwa na stacjach benzynowych w Polsce zależy od wielu czynników, zarówno krajowych, jak i globalnych. Zrozumienie tych mechanizmów pozwala lepiej planować wydatki i szukać oszczędności. Przyjrzyjmy się najważniejszym elementom, które wpływają na to, ile płacimy za benzynę, diesel i LPG.</p>
+          
+          <Separator className="my-8" />
+          
+          <h3 className="text-xl font-medium mb-4 text-gray-700">1. Ceny Ropy Naftowej na Świecie</h3>
+          <p className="mb-4"><strong>Ropa naftowa</strong> to podstawowy surowiec, z którego wytwarza się paliwa. Jej ceny są notowane na światowych giełdach i podlegają ciągłym wahaniom. Wpływają na nie:</p>
           <ul className="list-disc pl-6 space-y-2 my-4">
             <li>
-              <p><strong>Ceny ropy naftowej</strong> – główny składnik kosztu paliwa, zależny od sytuacji na rynkach globalnych.</p>
+              <p><strong>Sytuacja geopolityczna</strong>: Konflikty zbrojne, napięcia polityczne i decyzje OPEC (Organizacja Krajów Eksportujących Ropę Naftową) mają bezpośredni wpływ na podaż i popyt ropy.</p>
             </li>
             <li>
-              <p><strong>Kurs walut (dolar/złotówka)</strong> – ponieważ ropa jest kupowana w dolarach, jej cena rośnie, gdy złotówka słabnie.</p>
+              <p><strong>Warunki pogodowe</strong>: Ekstremalne zjawiska pogodowe, takie jak huragany, mogą zakłócić wydobycie i transport ropy, co prowadzi do wzrostu cen.</p>
             </li>
             <li>
-              <p><strong>Marża rafineryjna</strong> – zysk rafinerii za przetworzenie ropy na paliwo.</p>
-            </li>
-            <li>
-              <p><strong>Marża stacji benzynowej</strong> – różni się w zależności od lokalizacji i popytu.</p>
-            </li>
-            <li>
-              <p><strong>Podatki państwowe</strong> – obejmują VAT, akcyzę i opłatę paliwową, stanowiąc ponad 50% ceny paliwa.</p>
+              <p><strong>Spekulacje finansowe</strong>: Inwestorzy kupują i sprzedają kontrakty na ropę, co również wpływa na jej cenę.</p>
             </li>
           </ul>
-          <p className="mb-6">Dowiedz się więcej poniżej i sprawdź, jak <strong>oblicz paliwo</strong> oraz jego koszty z naszą pomocą!</p>
+          <p className="mb-6">Wzrost cen ropy naftowej automatycznie przekłada się na wyższe ceny paliw na stacjach benzynowych. Dlatego warto śledzić bieżące notowania ropy, aby przewidzieć zmiany cen paliw.</p>
           
           <Separator className="my-8" />
           
-          <h2 className="text-2xl font-semibold mb-4">Podatki na Paliwo – Ile Płacimy Państwu?</h2>
-          <p className="mb-4">Podatki to kluczowy element ceny paliwa w Polsce – ponad połowa tego, co płacisz przy dystrybutorze, trafia do budżetu państwa. Jak wygląda zestawienie?</p>
+          <h3 className="text-xl font-medium mb-4 text-gray-700">2. Kurs Walut – Złotego do Dolara</h3>
+          <p className="mb-4">Ropa naftowa jest wyceniana w dolarach amerykańskich. Oznacza to, że kurs złotego w stosunku do dolara ma ogromny wpływ na ceny paliw w Polsce. Im słabszy złoty, tym droższa ropa, a co za tym idzie – droższe paliwo.</p>
           <ul className="list-disc pl-6 space-y-2 my-4">
             <li>
-              <p><strong>Podatek VAT</strong>: 19% ceny paliwa.</p>
+              <p><strong>Słaby złoty</strong>: Import ropy staje się droższy, co podnosi ceny paliw na stacjach.</p>
             </li>
             <li>
-              <p><strong>Podatek akcyzowy</strong>:</p>
-              <ul className="list-circle pl-6 space-y-1 mt-2">
-                <li>
-                  <p>Benzyna PB95: ok. 37%,</p>
-                </li>
-                <li>
-                  <p>Olej napędowy (diesel): ok. 30%,</p>
-                </li>
-                <li>
-                  <p>LPG: ok. 23%.</p>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <p><strong>Opłata paliwowa</strong>:</p>
-              <ul className="list-circle pl-6 space-y-1 mt-2">
-                <li>
-                  <p>Benzyna PB95: ok. 3%,</p>
-                </li>
-                <li>
-                  <p>Diesel: ok. 7%,</p>
-                </li>
-                <li>
-                  <p>LPG: ok. 5%.</p>
-                </li>
-              </ul>
+              <p><strong>Mocny złoty</strong>: Import ropy jest tańszy, co może obniżyć ceny paliw.</p>
             </li>
           </ul>
-          <p className="mb-6">Z tych danych wynika, że w przypadku autogazu (LPG) podatki stanowią nieco mniej niż 50% ceny, ale marża stacji benzynowej jest wyższa – nawet 13%. Dla porównania, marża na benzynie czy dieslu jest zwykle niższa, zwłaszcza na dużych, sieciowych stacjach. Nasz <strong>kalkulator kosztów paliwa</strong> uwzględnia te różnice, pomagając Ci precyzyjnie oszacować wydatki.</p>
+          <p className="mb-6">Warto monitorować kurs walut, ponieważ jego wahania mogą szybko wpłynąć na to, ile zapłacimy za tankowanie.</p>
           
           <Separator className="my-8" />
           
-          <h2 className="text-2xl font-semibold mb-4">Inne Czynniki Wpływające na Cenę Paliwa</h2>
-          <p className="mb-4">Oprócz podatków i cen ropy istnieją dodatkowe elementy, które kształtują <strong>paliwo cena</strong>:</p>
+          <h3 className="text-xl font-medium mb-4 text-gray-700">3. Marża Rafinerii i Stacji Paliw</h3>
+          <p className="mb-4">Na ostateczną cenę paliwa wpływają również marże, jakie narzucają rafinerie i stacje benzynowe. Marża rafinerii pokrywa koszty przetworzenia ropy naftowej na paliwa, a marża stacji paliw – koszty dystrybucji i sprzedaży.</p>
           <ul className="list-disc pl-6 space-y-2 my-4">
             <li>
-              <p><strong>Popyt i podaż</strong>: Wysoki popyt na paliwo (np. w sezonie letnim) zwiększa marże stacji, a niski je obniża.</p>
+              <p><strong>Marża rafinerii</strong>: Zależy od kosztów produkcji, inwestycji w infrastrukturę i polityki cenowej.</p>
             </li>
             <li>
-              <p><strong>Rodzaj stacji</strong>: Sieciowe stacje benzynowe (np. Orlen, Shell) oferują niższe marże niż lokalne, mniejsze punkty.</p>
-            </li>
-            <li>
-              <p><strong>Historia cen ropy</strong>: W 2008 roku baryłka ropy kosztowała aż 145 dolarów, ale w 2009 spadła do 40 dolarów. W ostatnich dwóch dekadach ceny ropy jednak stale rosną.</p>
-            </li>
-            <li>
-              <p><strong>Kurs dolara</strong>: Wzrost wartości dolara wobec złotówki podnosi koszt zakupu ropy przez polskie rafinerie, co przekłada się na wyższe ceny paliwa na stacjach.</p>
+              <p><strong>Marża stacji paliw</strong>: Zależy od lokalizacji, konkurencji, kosztów operacyjnych i strategii marketingowej.</p>
             </li>
           </ul>
-          <p className="mb-6">Te czynniki pokazują, dlaczego <strong>cena paliwa</strong> jest zmienna i jak ważne jest śledzenie trendów, by lepiej planować wydatki na paliwo.</p>
+          <p className="mb-6">W okresach wzmożonego popytu (np. wakacje) marże mogą być wyższe, co przekłada się na wyższe ceny dla konsumentów.</p>
           
           <Separator className="my-8" />
           
-          <h2 className="text-2xl font-semibold mb-4">Jak Cena Paliwa Wpływa na Stacje Benzynowe?</h2>
-          <p className="mb-6">Ze względu na niskie marże (czasami tylko 6 zł zysku na 30 litrach paliwa), wiele stacji benzynowych przekształca się w wielofunkcyjne punkty – oferują sklepy, kawiarnie czy fast-foody. To sposób na zwiększenie dochodów, gdy zarobek z paliwa jest ograniczony. Dzięki naszemu <strong>kalkulatorowi kosztów paliwa</strong> możesz sprawdzić, ile naprawdę kosztuje Cię tankowanie i jak te marże wpływają na Twój budżet.</p>
-          
-          <Separator className="my-8" />
-          
-          <h2 className="text-2xl font-semibold mb-4">Cena Paliwa w Polsce a Inne Kraje Europy</h2>
-          <p className="mb-4">Porównując <strong>ceny paliwa</strong> w Polsce z innymi krajami Europy, Polska wypada stosunkowo korzystnie:</p>
+          <h3 className="text-xl font-medium mb-4 text-gray-700">4. Podatki i Opłaty</h3>
+          <p className="mb-4">Znaczną część ceny paliwa stanowią podatki i opłaty, które są pobierane przez państwo. W Polsce należą do nich:</p>
           <ul className="list-disc pl-6 space-y-2 my-4">
             <li>
-              <p><strong>Polska</strong>: PB95 – ok. 5,9 zł/litr, diesel – ok. 6 zł/litr, LPG – ok. 2,8 zł/litr.</p>
+              <p><strong>Podatek VAT</strong>: Podatek od wartości dodanej, który wynosi 23% ceny paliwa.</p>
             </li>
             <li>
-              <p><strong>Holandia</strong>: PB95 – ok. 7,5 zł/litr.</p>
+              <p><strong>Podatek akcyzowy</strong>: Podatek nakładany na wyroby akcyzowe, w tym paliwa. Jego wysokość jest ustalana przez państwo.</p>
             </li>
             <li>
-              <p><strong>Turcja</strong>: PB95 – ok. 4,5 zł/litr.</p>
+              <p><strong>Opłata paliwowa</strong>: Opłata przeznaczona na finansowanie budowy i utrzymania infrastruktury drogowej.</p>
+            </li>
+            <li>
+              <p><strong>Opłata emisyjna</strong>: Opłata związana z emisją CO2, która ma na celu promowanie bardziej ekologicznych rozwiązań.</p>
             </li>
           </ul>
-          <p className="mb-6">Jednak siła nabywcza zmienia perspektywę – w Holandii, mimo wyższej ceny, benzyna jest „tańsza" dla przeciętnego mieszkańca niż w Polsce czy Turcji. Chcesz wiedzieć, ile wydajesz na paliwo w porównaniu do innych? Skorzystaj z naszego narzędzia, by <strong>oblicz paliwo</strong> i przeanalizować swoje wydatki!</p>
+          <p className="mb-6">Podatki i opłaty stanowią znaczący udział w cenie paliwa, dlatego zmiany w polityce podatkowej państwa mogą mieć duży wpływ na to, ile płacimy na stacjach.</p>
           
           <Separator className="my-8" />
           
-          <h2 className="text-2xl font-semibold mb-4">Jak Oszczędzać na Paliwie?</h2>
-          <p className="mb-4">Rosnące <strong>koszty paliwa</strong> nie muszą być problemem. Oto kilka porad:</p>
+          <h3 className="text-xl font-medium mb-4 text-gray-700">5. Sezonowość i Popyt</h3>
+          <p className="mb-4">Ceny paliw podlegają również wpływom sezonowym. W okresie letnim, kiedy więcej osób podróżuje, popyt na paliwa rośnie, co często prowadzi do wzrostu cen. Zimą popyt może być niższy, ale warunki pogodowe (np. mrozy) mogą utrudniać transport i wydobycie, co również może wpływać na ceny.</p>
           <ul className="list-disc pl-6 space-y-2 my-4">
             <li>
-              <p>Tankuj na stacjach z niższymi marżami (np. sieciowych).</p>
+              <p><strong>Sezon letni</strong>: Wyższy popyt, wyższe ceny.</p>
             </li>
             <li>
-              <p>Monitoruj kurs dolara – tańszy dolar to niższa <strong>cena paliwa</strong>.</p>
+              <p><strong>Sezon zimowy</strong>: Potencjalne utrudnienia w transporcie, zmienne ceny.</p>
+            </li>
+          </ul>
+          <p className="mb-6">Warto planować tankowanie poza szczytem sezonu, aby uniknąć najwyższych cen.</p>
+          
+          <Separator className="my-8" />
+          
+          <h3 className="text-xl font-medium mb-4 text-gray-700">6. Konkurencja na Rynku</h3>
+          <p className="mb-4">Konkurencja między stacjami paliw również wpływa na ceny. W miejscach, gdzie działa wiele stacji, ceny mogą być niższe ze względu na walkę o klienta. Stacje często oferują promocje, rabaty i programy lojalnościowe, aby przyciągnąć kierowców.</p>
+          <ul className="list-disc pl-6 space-y-2 my-4">
+            <li>
+              <p><strong>Duża konkurencja</strong>: Niższe ceny, promocje.</p>
             </li>
             <li>
-              <p>Planuj trasy z naszym <strong>kalkulatorem kosztów paliwa</strong>, by uniknąć zbędnych wydatków.</p>
+              <p><strong>Mała konkurencja</strong>: Wyższe ceny, brak promocji.</p>
+            </li>
+          </ul>
+          <p className="mb-6">Warto porównywać ceny na różnych stacjach i korzystać z dostępnych promocji, aby zaoszczędzić na tankowaniu.</p>
+          
+          <Separator className="my-8" />
+          
+          <h3 className="text-xl font-medium mb-4 text-gray-700">Jak Można Zaoszczędzić na Paliwie?</h3>
+          <p className="mb-4">Znając czynniki wpływające na ceny paliw, można podjąć kroki, aby zmniejszyć wydatki na tankowanie:</p>
+          <ul className="list-disc pl-6 space-y-2 my-4">
+            <li>
+              <p><strong>Monitoruj ceny ropy i kurs walut</strong>: Śledź bieżące informacje, aby przewidzieć zmiany cen paliw.</p>
             </li>
             <li>
-              <p>Zmniejsz <strong>spalanie paliwa</strong> dzięki ekonomicznej jeździe (sprawdź nasze wskazówki na stronie głównej).</p>
+              <p><strong>Korzystaj z promocji i rabatów</strong>: Wiele stacji oferuje programy lojalnościowe i promocje, które pozwalają zaoszczędzić.</p>
+            </li>
+            <li>
+              <p><strong>Tankuj poza szczytem sezonu</strong>: Unikaj tankowania w okresach wzmożonego popytu, kiedy ceny są wyższe.</p>
+            </li>
+            <li>
+              <p><strong>Porównuj ceny na różnych stacjach</strong>: Sprawdzaj ceny na różnych stacjach i wybieraj te, które oferują najkorzystniejsze warunki.</p>
+            </li>
+            <li>
+              <p><strong>Dbaj o ekonomiczną jazdę</strong>: Unikaj gwałtownego przyspieszania i hamowania, utrzymuj stałą prędkość i regularnie serwisuj samochód.</p>
             </li>
           </ul>
           
           <Separator className="my-8" />
           
-          <h2 className="text-2xl font-semibold mb-4">Dlaczego Warto Śledzić Cenę Paliwa?</h2>
-          <p className="mb-6">Zrozumienie, od czego zależy <strong>paliwo cena</strong>, pozwala lepiej zarządzać budżetem na paliwo. Nasz <strong>kalkulator kosztów paliwa</strong> nie tylko oblicza <strong>spalanie paliwa</strong>, ale też pomaga oszacować, jak podatki, kursy walut i marże wpływają na Twoje wydatki. Sprawdź teraz i zacznij oszczędzać!</p>
+          <h3 className="text-xl font-medium mb-4 text-gray-700">Podsumowanie: Cena Paliwa w Twoich Rękach</h3>
+          <p className="mb-6">Cena paliwa zależy od wielu czynników, ale zrozumienie tych mechanizmów pozwala lepiej planować wydatki i szukać oszczędności. Monitoruj ceny ropy, kurs walut, korzystaj z promocji i dbaj o ekonomiczną jazdę, aby zmniejszyć koszty tankowania. Pamiętaj, że świadome podejście do zakupu paliwa to klucz do oszczędności!</p>
         </div>
       </Layout>
     </>

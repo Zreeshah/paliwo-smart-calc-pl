@@ -3,14 +3,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
+import { getImagePath } from '@/utils/imagePaths';
 
 const EkonomicznaJazda = () => {
   return (
     <>
       <Helmet>
         <title>Ekonomiczna Jazda – Jak Zmniejszyć Spalanie Paliwa?</title>
-        <meta name="description" content="Poznaj techniki ekonomicznej jazdy i dowiedz się, jak zmniejszyć spalanie paliwa. Oszczędzaj pieniądze i dbaj o środowisko dzięki ekojazdy." />
-        <link rel="canonical" href="https://kalkulator-spalaniapaliwa.pl/ekonomiczna-jazda" />
+        <meta name="description" content="Poznaj techniki ekonomicznej jazdy i dowiedz się, jak zmniejszyć zużycie paliwa. Praktyczne porady, które pomogą Ci zaoszczędzić na kosztach paliwa." />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/ekonomiczna-jazda" />
       </Helmet>
       
       <Layout>
@@ -19,8 +20,8 @@ const EkonomicznaJazda = () => {
           
           <div className="my-8">
             <img 
-              src="/lovable-uploads/eco-driving.jpg" 
-              alt="Ekonomiczna Jazda – Jak Zmniejszyć Spalanie Paliwa?" 
+              src={getImagePath("eco-driving.jpg")} 
+              alt="Ekonomiczna Jazda" 
               className="mx-auto max-w-full h-auto rounded-lg shadow-md" 
             />
           </div>

@@ -3,14 +3,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
+import { getImagePath } from '@/utils/imagePaths';
 
 const Hybryda = () => {
   return (
     <>
       <Helmet>
         <title>Samochody Hybrydowe – Jak Działają i Czy Się Opłacają?</title>
-        <meta name="description" content="Dowiedz się, jak działają samochody hybrydowe, jakie są ich zalety i wady oraz czy taki pojazd będzie dla Ciebie opłacalny." />
-        <link rel="canonical" href="https://kalkulator-spalaniapaliwa.pl/hybryda" />
+        <meta name="description" content="Dowiedz się, jak działają samochody hybrydowe, jakie rodzaje napędów hybrydowych istnieją i czy warto zainwestować w hybrydę. Wszystko o zaletach i wadach." />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/hybryda" />
       </Helmet>
       
       <Layout>
@@ -19,8 +20,8 @@ const Hybryda = () => {
           
           <div className="my-8">
             <img 
-              src="/lovable-uploads/hybrid-car.jpg" 
-              alt="Samochody Hybrydowe – Jak Działają i Czy Się Opłacają?" 
+              src={getImagePath("hybrid-car.jpg")} 
+              alt="Samochody Hybrydowe" 
               className="mx-auto max-w-full h-auto rounded-lg shadow-md" 
             />
           </div>

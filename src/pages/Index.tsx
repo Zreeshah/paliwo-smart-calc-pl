@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 import FuelConsumptionCalculator from '@/components/FuelConsumptionCalculator';
 import FuelCostCalculator from '@/components/FuelCostCalculator';
 import FAQSection from '@/components/FAQSection';
-import HomeContent from '@/components/HomeContent';
+import FuelInfoContent from '@/components/FuelInfoContent'; // Change from HomeContent to FuelInfoContent
 
 const Index = () => {
   const schemaData = {
@@ -50,7 +50,7 @@ const Index = () => {
             <FuelCostCalculator />
           </div>
           
-          <HomeContent />
+          <FuelInfoContent />
           
           <FAQSection />
         </div>

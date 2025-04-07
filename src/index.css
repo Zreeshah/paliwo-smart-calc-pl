@@ -55,6 +55,7 @@
 
   body {
     @apply bg-background text-foreground font-lato;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -75,6 +76,26 @@
   
   p {
     @apply mb-4;
+  }
+  
+  /* Add fade-in animation for lazy-loaded images */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Use content-visibility to improve paint times */
+  .content-container {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
   }
 }
 

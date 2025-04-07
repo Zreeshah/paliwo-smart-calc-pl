@@ -1,22 +1,39 @@
 
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import Index from "./pages/Index";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Disclaimer from "./pages/Disclaimer";
-import NotFound from "./pages/NotFound";
-import CenaPaliwa from "./pages/CenaPaliwa";
-import PaliwaPremium from "./pages/PaliwaPremium";
-import Diesel from "./pages/Diesel";
-import LPG from "./pages/LPG";
-import Hybryda from "./pages/Hybryda";
-import EkonomicznaJazda from "./pages/EkonomicznaJazda";
 
-const queryClient = new QueryClient();
+// Lazy load all pages to reduce initial bundle size
+const Index = lazy(() => import("./pages/Index"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Disclaimer = lazy(() => import("./pages/Disclaimer"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const CenaPaliwa = lazy(() => import("./pages/CenaPaliwa"));
+const PaliwaPremium = lazy(() => import("./pages/PaliwaPremium"));
+const Diesel = lazy(() => import("./pages/Diesel"));
+const LPG = lazy(() => import("./pages/LPG"));
+const Hybryda = lazy(() => import("./pages/Hybryda"));
+const EkonomicznaJazda = lazy(() => import("./pages/EkonomicznaJazda"));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex h-screen items-center justify-center">
+    <div className="text-brand-green animate-pulse">Ładowanie...</div>
+  </div>
+);
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false, // Reduce unnecessary network requests
+      staleTime: 5 * 60 * 1000, // 5 minutes
+    },
+  },
+});
 
 const App = () => (
   <HelmetProvider>
@@ -25,19 +42,21 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
-            <Route path="/zastrzezenie-prawne" element={<Disclaimer />} />
-            <Route path="/cena-paliwa" element={<CenaPaliwa />} />
-            <Route path="/paliwa-premium" element={<PaliwaPremium />} />
-            <Route path="/diesel" element={<Diesel />} />
-            <Route path="/lpg" element={<LPG />} />
-            <Route path="/hybryda" element={<Hybryda />} />
-            <Route path="/ekonomiczna-jazda" element={<EkonomicznaJazda />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
+              <Route path="/zastrzezenie-prawne" element={<Disclaimer />} />
+              <Route path="/cena-paliwa" element={<CenaPaliwa />} />
+              <Route path="/paliwa-premium" element={<PaliwaPremium />} />
+              <Route path="/diesel" element={<Diesel />} />
+              <Route path="/lpg" element={<LPG />} />
+              <Route path="/hybryda" element={<Hybryda />} />
+              <Route path="/ekonomiczna-jazda" element={<EkonomicznaJazda />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

@@ -29,6 +29,24 @@
     });
     </script>
     
+    <!-- Preload critical fonts first -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"></noscript>
+    
+    <!-- Less important font weights loaded asynchronously -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" media="print" onload="this.media='all'">
+    
+    <!-- Font loading fallback script -->
+    <script>
+      // This fallback ensures fonts are loaded if the previous onload approach fails
+      (function() {
+        var fontLink = document.createElement('link');
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap';
+        fontLink.rel = 'stylesheet';
+        document.head.appendChild(fontLink);
+      })();
+    </script>
+    
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Kalkulator Spalania Paliwa – Oblicz Zużycie i Koszty" />
     <meta property="og:description" content="Sprawdź zużycie paliwa i koszty podróży z naszym kalkulatorem spalania paliwa. Prosty, szybki i dokładny – oblicz paliwo już teraz!" />
@@ -44,10 +62,10 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
-    <!-- Font preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconnect to required origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
     <meta name="google-site-verification" content="6s2uP1_JPnxuVW_ewp1HGbFx577WJujWlDVeZTtG3RI" />
   </head>
 

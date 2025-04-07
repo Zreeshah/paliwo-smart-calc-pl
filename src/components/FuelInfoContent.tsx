@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
+import OptimizedImage from '@/components/OptimizedImage';
 
 const FuelInfoContent: React.FC = () => {
   return (
@@ -9,10 +10,11 @@ const FuelInfoContent: React.FC = () => {
         <h2 className="text-2xl md:text-3xl mb-4 text-brand-darkgreen">Kalkulator Spalania Paliwa – Jak Obliczyć Zużycie i Koszty Paliwa?</h2>
         
         <div className="my-8">
-          <img 
+          <OptimizedImage 
             src="/lovable-uploads/31f20ffa-34f5-4f8f-898b-e1be0f6d106a.png" 
             alt="kalkulator paliwa" 
-            className="mx-auto max-w-full h-auto rounded-lg shadow-md" 
+            className="mx-auto max-w-full h-auto rounded-lg shadow-md"
+            priority={true} // This is the main hero image so we load it with priority
           />
         </div>
         

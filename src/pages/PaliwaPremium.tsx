@@ -6,12 +6,39 @@ import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 
 const PaliwaPremium = () => {
+  const articleSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Paliwa Premium – Czy Warto Tankować Benzynę o Wyższej Liczbie Oktanowej?",
+    "description": "Dowiedz się, czy warto tankować paliwa premium jak PB98. Porównaj różnice między benzynami, sprawdź zalety i wady paliw o wyższej liczbie oktanowej.",
+    "image": "https://www.kalkulator-spalaniapaliwa.pl/lovable-uploads/premium-fuels.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.kalkulator-spalaniapaliwa.pl/favicon.svg"
+      }
+    },
+    "datePublished": "2023-10-15",
+    "dateModified": "2023-10-15"
+  };
+
   return (
     <>
       <Helmet>
         <title>Paliwa Premium – Czy Warto Tankować Benzynę o Wyższej Liczbie Oktanowej?</title>
         <meta name="description" content="Dowiedz się, czy warto tankować paliwa premium jak PB98. Porównaj różnice między benzynami, sprawdź zalety i wady paliw o wyższej liczbie oktanowej." />
         <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/paliwa-premium" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchemaData)}
+        </script>
       </Helmet>
       
       <Layout>

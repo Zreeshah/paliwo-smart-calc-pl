@@ -6,12 +6,39 @@ import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 
 const EkonomicznaJazda = () => {
+  const articleSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Ekonomiczna Jazda – Jak Zmniejszyć Spalanie Paliwa?",
+    "description": "Poznaj techniki ekonomicznej jazdy i dowiedz się, jak zmniejszyć zużycie paliwa. Praktyczne porady, które pomogą Ci zaoszczędzić na kosztach paliwa.",
+    "image": "https://www.kalkulator-spalaniapaliwa.pl/lovable-uploads/eco-driving.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.kalkulator-spalaniapaliwa.pl/favicon.svg"
+      }
+    },
+    "datePublished": "2023-09-15",
+    "dateModified": "2023-09-15"
+  };
+
   return (
     <>
       <Helmet>
         <title>Ekonomiczna Jazda – Jak Zmniejszyć Spalanie Paliwa?</title>
         <meta name="description" content="Poznaj techniki ekonomicznej jazdy i dowiedz się, jak zmniejszyć zużycie paliwa. Praktyczne porady, które pomogą Ci zaoszczędzić na kosztach paliwa." />
         <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/ekonomiczna-jazda" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchemaData)}
+        </script>
       </Helmet>
       
       <Layout>

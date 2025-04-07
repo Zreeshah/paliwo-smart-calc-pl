@@ -8,7 +8,7 @@ import FAQSection from '@/components/FAQSection';
 import FuelInfoContent from '@/components/FuelInfoContent';
 
 const Index = () => {
-  const schemaData = {
+  const faqSchemaData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -31,6 +31,19 @@ const Index = () => {
     ]
   };
 
+  const websiteSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Kalkulator Spalania Paliwa",
+    "url": "https://www.kalkulator-spalaniapaliwa.pl/",
+    "description": "Sprawdź zużycie paliwa i koszty podróży z naszym kalkulatorem spalania paliwa. Prosty, szybki i dokładny – oblicz paliwo już teraz!",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.kalkulator-spalaniapaliwa.pl/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -38,7 +51,10 @@ const Index = () => {
         <meta name="description" content="Sprawdź zużycie paliwa i koszty podróży z naszym kalkulatorem spalania paliwa. Prosty, szybki i dokładny – oblicz paliwo już teraz!" />
         <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/" />
         <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
+          {JSON.stringify(faqSchemaData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchemaData)}
         </script>
       </Helmet>
       

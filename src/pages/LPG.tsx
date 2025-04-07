@@ -6,12 +6,39 @@ import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 
 const LPG = () => {
+  const articleSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Co to jest LPG? Wszystko o Płynnym Paliwie Gazowym",
+    "description": "Dowiedz się wszystkiego o LPG - składzie, właściwościach, zaletach i zastosowaniu płynnego paliwa gazowego. Czy warto zainwestować w instalację LPG?",
+    "image": "https://www.kalkulator-spalaniapaliwa.pl/lovable-uploads/lpg-fuel.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.kalkulator-spalaniapaliwa.pl/favicon.svg"
+      }
+    },
+    "datePublished": "2023-09-01",
+    "dateModified": "2023-09-01"
+  };
+
   return (
     <>
       <Helmet>
         <title>Co to jest LPG? Wszystko o Płynnym Paliwie Gazowym</title>
         <meta name="description" content="Dowiedz się wszystkiego o LPG - składzie, właściwościach, zaletach i zastosowaniu płynnego paliwa gazowego. Czy warto zainwestować w instalację LPG?" />
         <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/lpg" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchemaData)}
+        </script>
       </Helmet>
       
       <Layout>

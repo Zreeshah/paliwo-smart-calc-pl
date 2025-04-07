@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
@@ -5,12 +6,39 @@ import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 
 const CenaPaliwa = () => {
+  const articleSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Od Czego Zależy Cena Paliwa? Poznaj Kluczowe Czynniki",
+    "description": "Dowiedz się, od czego zależy cena paliwa w Polsce. Poznaj czynniki wpływające na ceny benzyny, diesla i LPG oraz jak możesz zaoszczędzić na tankowaniu.",
+    "image": "https://www.kalkulator-spalaniapaliwa.pl/lovable-uploads/fuel-price.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.kalkulator-spalaniapaliwa.pl/favicon.svg"
+      }
+    },
+    "datePublished": "2023-10-01",
+    "dateModified": "2023-10-01"
+  };
+
   return (
     <>
       <Helmet>
         <title>Od Czego Zależy Cena Paliwa? Poznaj Kluczowe Czynniki</title>
         <meta name="description" content="Dowiedz się, od czego zależy cena paliwa w Polsce. Poznaj czynniki wpływające na ceny benzyny, diesla i LPG oraz jak możesz zaoszczędzić na tankowaniu." />
         <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/cena-paliwa" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchemaData)}
+        </script>
       </Helmet>
       
       <Layout>

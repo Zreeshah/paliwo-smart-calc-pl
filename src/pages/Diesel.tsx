@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
@@ -5,12 +6,39 @@ import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 
 const Diesel = () => {
+  const articleSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Diesel vs Benzyna – Co Wybrać i Kiedy Się Opłaca?",
+    "description": "Porównanie silników diesla i benzynowych. Dowiedz się, kiedy warto wybrać diesel, a kiedy lepszą opcją będzie silnik benzynowy. Koszty eksploatacji i różnice.",
+    "image": "https://www.kalkulator-spalaniapaliwa.pl/lovable-uploads/diesel-engine.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.kalkulator-spalaniapaliwa.pl/favicon.svg"
+      }
+    },
+    "datePublished": "2023-08-15",
+    "dateModified": "2023-08-15"
+  };
+
   return (
     <>
       <Helmet>
         <title>Diesel vs Benzyna – Co Wybrać i Kiedy Się Opłaca?</title>
         <meta name="description" content="Porównanie silników diesla i benzynowych. Dowiedz się, kiedy warto wybrać diesel, a kiedy lepszą opcją będzie silnik benzynowy. Koszty eksploatacji i różnice." />
         <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/diesel" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchemaData)}
+        </script>
       </Helmet>
       
       <Layout>

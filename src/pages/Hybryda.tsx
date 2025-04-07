@@ -6,12 +6,39 @@ import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 
 const Hybryda = () => {
+  const articleSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Samochody Hybrydowe – Jak Działają i Czy Się Opłacają?",
+    "description": "Dowiedz się, jak działają samochody hybrydowe, jakie rodzaje napędów hybrydowych istnieją i czy warto zainwestować w hybrydę. Wszystko o zaletach i wadach.",
+    "image": "https://www.kalkulator-spalaniapaliwa.pl/lovable-uploads/hybrid-car.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kalkulator Spalania Paliwa",
+      "url": "https://www.kalkulator-spalaniapaliwa.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.kalkulator-spalaniapaliwa.pl/favicon.svg"
+      }
+    },
+    "datePublished": "2023-11-01",
+    "dateModified": "2023-11-01"
+  };
+
   return (
     <>
       <Helmet>
         <title>Samochody Hybrydowe – Jak Działają i Czy Się Opłacają?</title>
         <meta name="description" content="Dowiedz się, jak działają samochody hybrydowe, jakie rodzaje napędów hybrydowych istnieją i czy warto zainwestować w hybrydę. Wszystko o zaletach i wadach." />
         <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/hybryda" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchemaData)}
+        </script>
       </Helmet>
       
       <Layout>

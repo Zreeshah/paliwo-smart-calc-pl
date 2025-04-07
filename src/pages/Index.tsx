@@ -1,13 +1,61 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Layout from '@/components/Layout';
+import FuelConsumptionCalculator from '@/components/FuelConsumptionCalculator';
+import FuelCostCalculator from '@/components/FuelCostCalculator';
+import FAQSection from '@/components/FAQSection';
+import HomeContent from '@/components/HomeContent';
 
 const Index = () => {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Jak obliczyć spalanie paliwa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aby obliczyć spalanie paliwa, podziel ilość zużytego paliwa (w litrach) przez przejechany dystans (w kilometrach), a następnie pomnóż przez 100. Otrzymasz wynik w litrach na 100 kilometrów (L/100km)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy kalkulator paliwa działa dla LPG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak, nasz kalkulator obsługuje różne rodzaje paliwa, w tym benzynę, olej napędowy (diesel) oraz LPG. Wystarczy wybrać odpowiedni rodzaj paliwa z listy dostępnych opcji."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Kalkulator Spalania Paliwa – Oblicz Zużycie i Koszty</title>
+        <meta name="description" content="Sprawdź zużycie paliwa i koszty podróży z naszym kalkulatorem spalania paliwa. Prosty, szybki i dokładny – oblicz paliwo już teraz!" />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+      </Helmet>
+      
+      <Layout>
+        <div>
+          <h1>Kalkulator Spalania Paliwa – Oblicz Zużycie i Koszty</h1>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+            <FuelConsumptionCalculator />
+            <FuelCostCalculator />
+          </div>
+          
+          <HomeContent />
+          
+          <FAQSection />
+        </div>
+      </Layout>
+    </>
   );
 };
 

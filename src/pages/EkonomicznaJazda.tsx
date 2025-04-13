@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
+import { Link } from 'react-router-dom';
 
 const EkonomicznaJazda = () => {
   const articleSchemaData = {
@@ -54,7 +54,7 @@ const EkonomicznaJazda = () => {
           </div>
           
           <h2 className="text-2xl font-semibold mt-10 mb-4">Czym Jest Ekonomiczna Jazda i Jak Oszczędzać Paliwo?</h2>
-          <p className="mb-6"><strong>Ekonomiczna jazda</strong> to sztuka poruszania się samochodem w sposób, który zapewnia <strong>oszczędność paliwa</strong> bez utraty sprawności na drodze. Chcesz obniżyć <strong>koszty paliwa</strong> i jeździć bardziej ekologicznie? Klucz tkwi w odpowiedniej technice jazdy i dbaniu o stan pojazdu. W tym artykule pokażemy, jak <strong>zmniejszyć spalanie</strong> i dlaczego warto to robić. Sprawdź, jak nasz <strong>kalkulator spalania paliwa</strong> pomoże Ci monitorować zużycie!</p>
+          <p className="mb-6"><strong>Ekonomiczna jazda</strong> to sztuka poruszania się samochodem w sposób, który zapewnia <strong>oszczędność paliwa</strong> bez utraty sprawności na drodze. Chcesz obniżyć <strong>koszty paliwa</strong> i jeździć bardziej ekologicznie? Klucz tkwi w odpowiedniej technice jazdy i dbaniu o stan pojazdu. W tym artykule pokażemy, jak <strong>zmniejszyć spalanie</strong> i dlaczego warto to robić. Sprawdź, jak nasz <Link to="/" className="text-blue-600 hover:underline">kalkulator spalania paliwa dostępny na stronie głównej</Link> pomoże Ci monitorować zużycie!</p>
           
           <Separator className="my-8" />
           
@@ -130,7 +130,7 @@ const EkonomicznaJazda = () => {
               <p><strong>Zużyte elementy</strong>: Stare oleje, filtry czy łożyska podnoszą zużycie paliwa.</p>
             </li>
           </ul>
-          <p className="mb-6">Regularna konserwacja to prosty sposób na obniżenie <strong>kosztów paliwa</strong> i dłuższą żywotność samochodu.</p>
+          <p className="mb-6">Regularna konserwacja to prosty sposób na obniżenie <strong>kosztów paliwa</strong> i dłuższą żywotność auta.</p>
           
           <Separator className="my-8" />
           
@@ -170,7 +170,7 @@ const EkonomicznaJazda = () => {
               <p>Ekonomiczna jazda: 6,5 l/100 km (38 zł) – oszczędność 9 zł na 100 km!</p>
             </li>
           </ul>
-          <p className="mb-6">Chcesz obliczyć swoje wyniki? Nasz <strong>kalkulator spalania paliwa</strong> pokaże, ile możesz zaoszczędzić!</p>
+          <p className="mb-6">Chcesz obliczyć swoje wyniki? Nasz <strong>kalkulator spalania paliwa</strong> pokaże, ile możesz zaoszczędzić! Sprawdź też wpływ <Link to="/paliwa-premium" className="text-blue-600 hover:underline">wyboru paliw premium</Link> na ekonomię jazdy.</p>
           
           <Separator className="my-8" />
           

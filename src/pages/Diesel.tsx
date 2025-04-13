@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
+import { Link } from 'react-router-dom';
 
 const Diesel = () => {
   const articleSchemaData = {
@@ -54,7 +55,7 @@ const Diesel = () => {
           </div>
           
           <h2 className="text-2xl font-semibold mt-10 mb-4">Porównanie Silników: Diesel vs Benzyna</h2>
-          <p className="mb-4">Jakie są różnice między <strong>silnikiem diesla</strong> a <strong>silnikiem benzynowym</strong>? Oto szczegółowe zestawienie:</p>
+          <p className="mb-4">Jakie są różnice między <strong>silnikiem diesla</strong> a <strong>silnikiem benzynowym</strong>? Oto szczegółowe zestawienie dostępne na naszej <Link to="/" className="text-blue-600 hover:underline">stronie głównej z kalkulatorem spalania</Link>, które pomoże Ci podjąć właściwą decyzję:</p>
           <ul className="list-disc pl-6 space-y-2 my-4">
             <li>
               <p><strong>Spalanie paliwa</strong>: Diesel zużywa mniej paliwa (np. 5-6 l/100 km vs 7-8 l/100 km dla benzyny), co obniża <strong>koszty paliwa</strong> na długich trasach.</p>
@@ -88,7 +89,7 @@ const Diesel = () => {
           <Separator className="my-8" />
           
           <h3 className="text-xl font-medium mb-4 text-gray-700">Spadek Popularności Diesla – Dlaczego?</h3>
-          <p className="mb-4">Sprzedaż samochodów z <strong>silnikiem diesla</strong> spada – w 2018 roku tylko 25% nowych aut miało silnik wysokoprężny, a reszta to benzyna i hybrydy. Powody?</p>
+          <p className="mb-4">Sprzedaż samochodów z <strong>silnikiem diesla</strong> spada – w 2018 roku tylko 25% nowych aut miało silnik wysokoprężny, a reszta to benzyna i <Link to="/hybryda" className="text-blue-600 hover:underline">hybrydy</Link>. Powody?</p>
           <ul className="list-disc pl-6 space-y-2 my-4">
             <li>
               <p><strong>Normy emisji spalin</strong>: Unia Europejska zaostrza przepisy, a diesle emitują więcej CO2 niż silniki benzynowe.</p>

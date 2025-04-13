@@ -1,137 +1,173 @@
 
 import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import OptimizedImage from '@/components/OptimizedImage';
+import { Link } from 'react-router-dom';
+import { Card, CardContent } from '@/components/ui/card';
 
 const FuelInfoContent: React.FC = () => {
   return (
-    <div className="mt-12 space-y-8">
+    <div className="mt-12 space-y-12">
       <section>
-        <h2 className="text-2xl md:text-3xl mb-4 text-brand-darkgreen">Kalkulator Spalania Paliwa – Jak Obliczyć Zużycie i Koszty Paliwa?</h2>
-        
-        <div className="my-8">
-          <OptimizedImage 
-            src="/lovable-uploads/31f20ffa-34f5-4f8f-898b-e1be0f6d106a.png" 
-            alt="kalkulator paliwa" 
-            className="mx-auto max-w-full h-auto rounded-lg shadow-md"
-            priority={true} // This is the main hero image so we load it with priority
-          />
+        <h2 className="text-2xl font-semibold mb-4">Jak Działa Nasz Kalkulator Paliwa?</h2>
+        <p className="mb-4">
+          Nasz kalkulator spalania paliwa to proste i intuicyjne narzędzie, które pozwala szybko obliczyć zużycie 
+          paliwa Twojego samochodu oraz koszty podróży. Wystarczy wprowadzić kilka podstawowych danych, takich jak 
+          przejechany dystans, ilość zużytego paliwa oraz typ paliwa. Kalkulator automatycznie przeliczy wartości 
+          i przedstawi Ci wynik w postaci średniego zużycia paliwa na 100 kilometrów.
+        </p>
+        <p className="mb-4">
+          Aby skorzystać z kalkulatora spalania paliwa, wykonaj następujące kroki:
+        </p>
+        <ol className="list-decimal pl-6 space-y-2 my-4">
+          <li>
+            Wprowadź przejechany dystans w kilometrach (lub milach).
+          </li>
+          <li>
+            Podaj ilość zużytego paliwa w litrach (lub galonach).
+          </li>
+          <li>
+            Wybierz rodzaj paliwa (benzyna, diesel, LPG).
+          </li>
+          <li>
+            Kliknij przycisk "Oblicz zużycie".
+          </li>
+        </ol>
+        <p className="mb-4">
+          Po wykonaniu tych prostych kroków otrzymasz wynik w postaci średniego zużycia paliwa na 100 km. Możesz 
+          również skorzystać z naszej bazy pojazdów, aby szybko porównać zużycie paliwa dla różnych modeli samochodów.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Kalkulator Spalania Paliwa dla Twojego Samochodu</h2>
+        <p className="mb-4">
+          Nasze narzędzie jest dostosowane do różnych typów pojazdów i rodzajów paliw. Niezależnie od tego, czy 
+          jeździsz samochodem benzynowym, dieslem czy zasilanym LPG, nasz kalkulator pomoże Ci precyzyjnie obliczyć 
+          zużycie paliwa. Dzięki wbudowanej bazie popularnych modeli samochodów możesz również szybko porównać 
+          swój wynik ze średnimi wartościami dla danego pojazdu.
+        </p>
+        <p className="mb-4">
+          Dodatkowo, w kalkulatorze kosztów paliwa uwzględniamy dodatkowe czynniki, które mają wpływ na zużycie, 
+          takie jak liczba pasażerów i ich waga. Każde dodatkowe 100 kg w samochodzie zwiększa zużycie paliwa 
+          o około 0,6 litra na 100 km, co może znacząco wpłynąć na koszty dłuższych podróży.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Polecane Artykuły</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-5">
+              <h3 className="text-lg font-medium mb-2">Ekonomiczna Jazda</h3>
+              <p className="text-sm text-gray-600 mb-3">Poznaj techniki ekonomicznej jazdy i dowiedz się, jak zmniejszyć zużycie paliwa.</p>
+              <Link to="/ekonomiczna-jazda" className="text-blue-600 hover:underline">
+                Jak zmniejszyć spalanie paliwa?
+              </Link>
+            </CardContent>
+          </Card>
+          
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-5">
+              <h3 className="text-lg font-medium mb-2">Diesel vs Benzyna</h3>
+              <p className="text-sm text-gray-600 mb-3">Porównanie silników diesla i benzynowych. Dowiedz się, kiedy warto wybrać diesel.</p>
+              <Link to="/diesel" className="text-blue-600 hover:underline">
+                Co wybrać i kiedy się opłaca?
+              </Link>
+            </CardContent>
+          </Card>
+          
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-5">
+              <h3 className="text-lg font-medium mb-2">Co to jest LPG?</h3>
+              <p className="text-sm text-gray-600 mb-3">Wszystko o płynnym paliwie gazowym - skład, właściwości i zastosowanie.</p>
+              <Link to="/lpg" className="text-blue-600 hover:underline">
+                Zalety i zastosowanie LPG
+              </Link>
+            </CardContent>
+          </Card>
+          
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-5">
+              <h3 className="text-lg font-medium mb-2">Od Czego Zależy Cena Paliwa?</h3>
+              <p className="text-sm text-gray-600 mb-3">Poznaj kluczowe czynniki wpływające na ceny paliw w Polsce.</p>
+              <Link to="/cena-paliwa" className="text-blue-600 hover:underline">
+                Czynniki kształtujące cenę paliwa
+              </Link>
+            </CardContent>
+          </Card>
+          
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-5">
+              <h3 className="text-lg font-medium mb-2">Paliwa Premium</h3>
+              <p className="text-sm text-gray-600 mb-3">Czy warto tankować benzynę o wyższej liczbie oktanowej jak PB98?</p>
+              <Link to="/paliwa-premium" className="text-blue-600 hover:underline">
+                Zalety i wady paliw premium
+              </Link>
+            </CardContent>
+          </Card>
         </div>
-        
-        <h3 className="text-xl md:text-2xl mb-3 text-gray-700">Jak Działa Kalkulator Paliwa i Dlaczego Warto Go Użyć?</h3>
-        <p>
-          Chcesz wiedzieć, ile paliwa zużywa Twój samochód w mieście, na autostradzie czy w trasie? Nasz <strong>kalkulator spalania paliwa</strong> pomoże Ci szybko i dokładnie obliczyć <strong>spalanie paliwa</strong> oraz koszty podróży. Zużycie paliwa podawane przez producentów samochodów często różni się od rzeczywistości. Dlaczego? Testy fabryczne odbywają się w idealnych warunkach, a w praktyce na <strong>licznik spalania paliwa</strong> wpływają takie czynniki jak styl jazdy, obciążenie pojazdu, ciśnienie w oponach, prędkość czy włączona klimatyzacja. Dzięki naszemu <strong>przelicznikowi paliwa</strong> dowiesz się, jak te elementy wpływają na Twoje wydatki i jak jeździć ekonomiczniej – sprawdź nasze porady poniżej!
-        </p>
       </section>
-      
-      <Separator />
-      
+
       <section>
-        <h3 className="text-xl md:text-2xl mb-3 text-gray-700">Jak Obliczyć Spalanie Paliwa w Mieście?</h3>
-        <p>Aby precyzyjnie sprawdzić <strong>spalanie paliwa</strong> w warunkach miejskich, wykonaj kilka prostych kroków:</p>
-        <ol className="list-decimal pl-6 space-y-2 my-4">
-          <li>Zatankuj bak do pełna i wyzeruj licznik kilometrów.</li>
-          <li>Przejedź określony dystans, np. w ruchu miejskim.</li>
-          <li>Po zatankowaniu ponownie zanotuj, ile litrów paliwa dodałeś i ile kilometrów przejechałeś.</li>
-          <li>Skorzystaj z wzoru:</li>
-        </ol>
-        
-        <p className="font-bold my-4">śsp = izp / d * 100</p>
-        
-        <p>gdzie:</p>
+        <h2 className="text-2xl font-semibold mb-4">Oblicz Koszty Paliwa na Trasie</h2>
+        <p className="mb-4">
+          Planujesz podróż i chcesz wiedzieć, ile będzie kosztować paliwo? Nasz kalkulator kosztów paliwa pomoże 
+          Ci precyzyjnie zaplanować budżet na paliwo. Wystarczy, że podasz dystans, średnie zużycie paliwa oraz 
+          aktualną cenę paliwa, a otrzymasz dokładny koszt całej trasy.
+        </p>
+        <p className="mb-4">
+          Dodatkowo, nasz kalkulator:
+        </p>
         <ul className="list-disc pl-6 space-y-2 my-4">
-          <li><strong>śsp</strong> – średnie spalanie paliwa (litry na 100 km),</li>
-          <li><strong>izp</strong> – ilość zatankowanego paliwa (litry),</li>
-          <li><strong>d</strong> – dystans (kilometry).</li>
+          <li>
+            Oblicza koszt podróży w przeliczeniu na jednego pasażera – idealne do podziału kosztów podczas wspólnych wyjazdów.
+          </li>
+          <li>
+            Szacuje emisję CO2 związaną z podróżą – pozwala na świadome monitorowanie śladu węglowego.
+          </li>
+          <li>
+            Umożliwia wybór różnych walut (PLN, EUR, USD) – przydatne podczas planowania podróży zagranicznych.
+          </li>
         </ul>
-        
-        <p className="font-bold mt-4">Przykład:</p>
-        <p>
-          Zatankowałeś 44 litry paliwa i przejechałeś 450 km w mieście. Obliczenie wygląda tak:
-        </p>
-        
-        <p className="font-bold my-4">śsp = 44 / 450 * 100 = 9,7 litra na 100 km.</p>
-        
-        <p>W tym przypadku Twoje auto zużywa 9,7 litra paliwa na każde 100 km w ruchu miejskim. Nasz <strong>kalkulator spalania benzyny</strong> zrobi to za Ciebie w kilka sekund!</p>
-      </section>
-      
-      <Separator />
-      
-      <section>
-        <h3 className="text-xl md:text-2xl mb-3 text-gray-700">Spalanie Paliwa na Autostradzie i w Trasie</h3>
-        <p>
-          Metoda obliczania <strong>spalania paliwa</strong> na autostradzie, drogach krajowych czy w cyklu mieszanym jest taka sama. Wystarczy dostosować warunki jazdy i ponownie użyć wzoru. Na przykład na autostradzie spalanie może być niższe dzięki stałej prędkości, ale klimatyzacja czy większa prędkość mogą je zwiększyć. Skorzystaj z naszego <strong>kalkulatora kosztów paliwa</strong>, aby porównać wyniki dla różnych tras i dowiedzieć się, jak zaoszczędzić.
+        <p className="mb-4">
+          Dzięki tym funkcjom możesz nie tylko zaplanować budżet na paliwo, ale również podjąć bardziej świadome 
+          decyzje dotyczące transportu, mając na uwadze zarówno aspekty ekonomiczne, jak i ekologiczne.
         </p>
       </section>
-      
-      <Separator />
-      
+
       <section>
-        <h3 className="text-xl md:text-2xl mb-3 text-gray-700">Jak Obciążenie Wpływa na Spalanie Paliwa?</h3>
-        <p>
-          Dodatkowy bagaż czy pasażerowie zwiększają zużycie paliwa. W naszym <strong>kalkulatorze spalania paliwa</strong> przyjęliśmy, że każde 100 kg dodatkowego obciążenia podnosi spalanie o 0,6 litra na 100 km. Aby obliczyć dodatkowe spalanie, użyj wzoru:
+        <h2 className="text-2xl font-semibold mb-4">Porady Dotyczące Oszczędzania Paliwa</h2>
+        <p className="mb-4">
+          Chcesz zmniejszyć zużycie paliwa i zaoszczędzić na kosztach podróży? Oto kilka sprawdzonych porad:
         </p>
-        
-        <p className="font-bold my-4">ds = (śwo * io * 0.6) / 100</p>
-        
-        <p>gdzie:</p>
         <ul className="list-disc pl-6 space-y-2 my-4">
-          <li><strong>ds</strong> – dodatkowe spalanie (litry na 100 km),</li>
-          <li><strong>śwo</strong> – średnia waga osoby (kg),</li>
-          <li><strong>io</strong> – ilość osób.</li>
+          <li>
+            <strong>Utrzymuj stałą prędkość:</strong> Jazda ze stałą, umiarkowaną prędkością jest bardziej ekonomiczna 
+            niż częste przyspieszanie i hamowanie.
+          </li>
+          <li>
+            <strong>Sprawdzaj ciśnienie w oponach:</strong> Prawidłowo napompowane opony mogą zmniejszyć zużycie paliwa 
+            nawet o 3%.
+          </li>
+          <li>
+            <strong>Unikaj zbędnego obciążenia:</strong> Usuń z samochodu niepotrzebne przedmioty zwiększające jego wagę.
+          </li>
+          <li>
+            <strong>Wyłączaj silnik na postoju:</strong> Jeśli zatrzymujesz się na dłużej niż minutę, wyłącz silnik.
+          </li>
+          <li>
+            <strong>Planuj trasę:</strong> Unikaj korków i wybieraj trasy, na których będziesz mógł utrzymać stałą prędkość.
+          </li>
+          <li>
+            <strong>Regularnie serwisuj samochód:</strong> Zadbany silnik pracuje wydajniej i spala mniej paliwa.
+          </li>
         </ul>
-        
-        <p className="font-bold mt-4">Przykład:</p>
-        <p>
-          W pojeździe podróżuje 5 osób, każda o średniej wadze 70 kg. Obliczenie:
+        <p className="mb-4">
+          Stosując się do tych wskazówek, możesz znacznie zmniejszyć zużycie paliwa, co przełoży się na wymierne 
+          oszczędności finansowe oraz mniejszy wpływ na środowisko naturalne. Więcej szczegółowych porad znajdziesz w naszym 
+          <Link to="/ekonomiczna-jazda" className="text-blue-600 hover:underline mx-1">
+            poradniku ekonomicznej jazdy
+          </Link>.
         </p>
-        
-        <p className="font-bold my-4">ds = (70 * 5 * 0.6) / 100 = 2,1 litra na 100 km.</p>
-        
-        <p>
-          To oznacza, że pasażerowie zwiększają spalanie o 2,1 litra na każde 100 km. Nasz <strong>licznik paliwa</strong> automatycznie uwzględni te dane, abyś mógł precyzyjnie <strong>obliczyć paliwo</strong> i koszty.
-        </p>
-      </section>
-      
-      <Separator />
-      
-      <section>
-        <h3 className="text-xl md:text-2xl mb-3 text-gray-700">Dlaczego Warto Używać Kalkulatora Spalania Paliwa?</h3>
-        <p>Nasz <strong>kalkulator paliwa</strong> to nie tylko <strong>przelicznik paliwa</strong>, ale także narzędzie do oszczędzania. Dzięki niemu:</p>
-        <ul className="list-disc pl-6 space-y-2 my-4">
-          <li>Sprawdzisz rzeczywiste <strong>spalanie paliwa</strong> swojego samochodu.</li>
-          <li>Obliczysz <strong>koszty paliwa</strong> na dowolnej trasie.</li>
-          <li>Dowiesz się, jak obciążenie, styl jazdy czy warunki drogowe wpływają na zużycie.</li>
-          <li>Otrzymasz wskazówki, jak jeździć ekonomicznie i zmniejszyć wydatki na paliwo.</li>
-        </ul>
-      </section>
-      
-      <Separator />
-      
-      <section>
-        <h3 className="text-xl md:text-2xl mb-3 text-gray-700">Porady na Ekonomiczne Zużycie Paliwa</h3>
-        <p>Chcesz obniżyć <strong>spalanie paliwa</strong> i zaoszczędzić? Oto kilka wskazówek:</p>
-        <ul className="list-disc pl-6 space-y-2 my-4">
-          <li><strong>Unikaj gwałtownego przyspieszania</strong> – płynna jazda zmniejsza zużycie paliwa.</li>
-          <li><strong>Sprawdzaj ciśnienie w oponach</strong> – zbyt niskie zwiększa opór i spalanie.</li>
-          <li><strong>Wyłącz klimatyzację, gdy nie jest potrzebna</strong> – to dodatkowy koszt paliwa.</li>
-          <li><strong>Planuj trasy</strong> – nasz <strong>kalkulator kosztów paliwa</strong> pomoże Ci wybrać najtańszą opcję.</li>
-        </ul>
-        <p>Dowiedz się więcej o ekonomicznej jeździe i przetestuj nasz <strong>kalkulator spalania paliwa</strong> już teraz!</p>
-      </section>
-      
-      <Separator />
-      
-      <section>
-        <h3 className="text-xl md:text-2xl mb-3 text-gray-700">Jak Skorzystać z Naszego Kalkulatora Paliwa?</h3>
-        <ol className="list-decimal pl-6 space-y-2 my-4">
-          <li>Wprowadź dystans podróży (km lub mile).</li>
-          <li>Podaj ilość zatankowanego paliwa lub wybierz średnie spalanie Twojego pojazdu.</li>
-          <li>Wybierz typ paliwa (benzyna, diesel, LPG).</li>
-          <li>Dodaj dane o pasażerach lub bagażu, jeśli chcesz uwzględnić obciążenie.</li>
-          <li>Kliknij „Oblicz" – wyniki pojawią się natychmiast, w tym <strong>spalanie paliwa</strong>, koszty i emisja CO2.</li>
-        </ol>
-        <p>Nasz <strong>licznik spalania paliwa</strong> jest intuicyjny i szybki – idealny dla każdego kierowcy!</p>
       </section>
     </div>
   );

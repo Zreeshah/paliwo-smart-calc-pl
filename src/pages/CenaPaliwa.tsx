@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
+import { Link } from 'react-router-dom';
 
 const CenaPaliwa = () => {
   const articleSchemaData = {
@@ -54,7 +55,7 @@ const CenaPaliwa = () => {
           </div>
           
           <h2 className="text-2xl font-semibold mt-10 mb-4">Jakie Czynniki Kształtują Cenę Paliwa na Stacjach w Polsce?</h2>
-          <p className="mb-6">Cena paliwa na stacjach benzynowych w Polsce zależy od wielu czynników, zarówno krajowych, jak i globalnych. Zrozumienie tych mechanizmów pozwala lepiej planować wydatki i szukać oszczędności. Przyjrzyjmy się najważniejszym elementom, które wpływają na to, ile płacimy za benzynę, diesel i LPG.</p>
+          <p className="mb-6">Cena paliwa na stacjach benzynowych w Polsce zależy od wielu czynników, zarówno krajowych, jak i globalnych. Zrozumienie tych mechanizmów pozwala lepiej planować wydatki i szukać oszczędności. Przyjrzyjmy się najważniejszym elementom, które wpływają na to, ile płacimy za benzynę, diesel i <Link to="/lpg" className="text-blue-600 hover:underline">LPG</Link>. Aby dokładnie obliczyć wpływ cen paliw na Twój budżet, skorzystaj z <Link to="/" className="text-blue-600 hover:underline">naszego kalkulatora spalania na stronie głównej</Link>.</p>
           
           <Separator className="my-8" />
           
@@ -167,7 +168,7 @@ const CenaPaliwa = () => {
               <p><strong>Porównuj ceny na różnych stacjach</strong>: Sprawdzaj ceny na różnych stacjach i wybieraj te, które oferują najkorzystniejsze warunki.</p>
             </li>
             <li>
-              <p><strong>Dbaj o ekonomiczną jazdę</strong>: Unikaj gwałtownego przyspieszania i hamowania, utrzymuj stałą prędkość i regularnie serwisuj samochód.</p>
+              <p><strong>Dbaj o ekonomiczną jazdę</strong>: Unikaj gwałtownego przyspieszania i hamowania, utrzymuj stałą prędkość i regularnie serwisuj samochód – więcej wskazówek znajdziesz w naszym <Link to="/ekonomiczna-jazda" className="text-blue-600 hover:underline">poradniku ekonomicznej jazdy</Link>.</p>
             </li>
           </ul>
           

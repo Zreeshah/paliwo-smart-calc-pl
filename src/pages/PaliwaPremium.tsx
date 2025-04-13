@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
+import { Link } from 'react-router-dom';
 
 const PaliwaPremium = () => {
   const articleSchemaData = {
@@ -54,7 +55,7 @@ const PaliwaPremium = () => {
           </div>
           
           <h2 className="text-2xl font-semibold mt-10 mb-4">Czym Charakteryzują się Paliwa Premium?</h2>
-          <p className="mb-6"><strong>Paliwa premium</strong>, takie jak PB98 czy specjalne mieszanki oferowane przez stacje BP, Shell, Orlen czy Lotos, zyskują coraz większą popularność wśród kierowców. Ale czym różnią się od standardowej benzyny PB95? Czy naprawdę poprawiają osiągi samochodu i zmniejszają <strong>spalanie paliwa</strong>? W tym artykule wyjaśnimy, czym są <strong>benzyny premium</strong>, jak działa <strong>liczba oktanowa</strong> i czy warto je tankować. Sprawdź, jak nasz <strong>kalkulator spalania paliwa</strong> może pomóc Ci ocenić różnice w kosztach i zużyciu!</p>
+          <p className="mb-6"><strong>Paliwa premium</strong>, takie jak PB98 czy specjalne mieszanki oferowane przez stacje BP, Shell, Orlen czy Lotos, zyskują coraz większą popularność wśród kierowców. Ale czym różnią się od standardowej benzyny PB95? Czy naprawdę poprawiają osiągi samochodu i zmniejszają <strong>spalanie paliwa</strong>? W tym artykule wyjaśnimy, czym są <strong>benzyny premium</strong>, jak działa <strong>liczba oktanowa</strong> i czy warto je tankować. Sprawdź, jak nasz <Link to="/" className="text-blue-600 hover:underline">kalkulator spalania paliwa na stronie głównej</Link> może pomóc Ci ocenić różnice w kosztach i zużyciu!</p>
           
           <Separator className="my-8" />
           
@@ -178,7 +179,7 @@ const PaliwaPremium = () => {
               <p>Monitoruj <strong>spalanie paliwa</strong> z naszym kalkulatorem, by ocenić, czy PB98 się opłaca.</p>
             </li>
             <li>
-              <p>Jeźdź ekonomicznie – płynna jazda zmniejsza zużycie niezależnie od paliwa.</p>
+              <p>Jeźdź ekonomicznie – poznaj techniki <Link to="/ekonomiczna-jazda" className="text-blue-600 hover:underline">ekonomicznej jazdy</Link>, które zmniejszają zużycie niezależnie od rodzaju paliwa.</p>
             </li>
           </ul>
           

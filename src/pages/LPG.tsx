@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
+import { Link } from 'react-router-dom';
 
 const LPG = () => {
   const articleSchemaData = {
@@ -54,7 +54,7 @@ const LPG = () => {
           </div>
           
           <h2 className="text-2xl font-semibold mt-10 mb-4">Czym Jest LPG i Jak Się Je Otrzymuje?</h2>
-          <p className="mb-6"><strong>LPG</strong>, czyli z angielskiego <em>Liquefied Petroleum Gas</em> (płynne paliwo gazowe), to popularna alternatywa dla benzyny i oleju napędowego. Jak powstaje <strong>płynne paliwo gazowe</strong>? Otrzymuje się je jako produkt uboczny podczas rafinacji ropy naftowej oraz ze złóż gazu ziemnego. Składa się głównie z mieszaniny propanu (C3H8) i butanu (C4H10), co czyni je ekologicznym i ekonomicznym wyborem dla kierowców. Dowiedz się więcej o <strong>LPG</strong> i sprawdź, jak nasz <strong>kalkulator spalania paliwa</strong> pomoże Ci obliczyć <strong>koszty paliwa</strong>!</p>
+          <p className="mb-6"><strong>LPG</strong>, czyli z angielskiego <em>Liquefied Petroleum Gas</em> (płynne paliwo gazowe), to popularna alternatywa dla benzyny i oleju napędowego. Jak powstaje <strong>płynne paliwo gazowe</strong>? Otrzymuje się je jako produkt uboczny podczas rafinacji ropy naftowej oraz ze złóż gazu ziemnego. Składa się głównie z mieszaniny propanu (C3H8) i butanu (C4H10), co czyni je ekologicznym i ekonomicznym wyborem dla kierowców. Dowiedz się więcej o <strong>LPG</strong> i sprawdź, jak nasz <Link to="/" className="text-blue-600 hover:underline">kalkulator spalania paliwa na stronie głównej</Link> pomoże Ci obliczyć <strong>koszty paliwa</strong>!</p>
           
           <Separator className="my-8" />
           
@@ -127,7 +127,7 @@ const LPG = () => {
               <p>LPG: 9,6 l/100 km po 2,8 zł/l = 26,88 zł.</p>
             </li>
           </ul>
-          <p className="mb-6">Chcesz dokładnie obliczyć <strong>spalanie paliwa</strong> i <strong>koszty paliwa</strong> dla swojego auta? Nasz <strong>kalkulator spalania paliwa</strong> pokaże Ci, ile oszczędzisz na LPG!</p>
+          <p className="mb-6">Chcesz dokładnie obliczyć <strong>spalanie paliwa</strong> i <strong>koszty paliwa</strong> dla swojego auta? Nasz <strong>kalkulator spalania paliwa</strong> pokaże Ci, ile oszczędzisz na LPG! Jeśli interesuje Cię wpływ <Link to="/cena-paliwa" className="text-blue-600 hover:underline">zmian cen paliw</Link> na opłacalność instalacji LPG, sprawdź nasz szczegółowy artykuł.</p>
           
           <Separator className="my-8" />
           

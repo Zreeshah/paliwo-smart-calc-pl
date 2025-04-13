@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
+import { Link } from 'react-router-dom';
 
 const Hybryda = () => {
   const articleSchemaData = {
@@ -54,7 +54,7 @@ const Hybryda = () => {
           </div>
           
           <h2 className="text-2xl font-semibold mt-10 mb-4">Czym Są Samochody Hybrydowe i Jakie Napędy Oferują?</h2>
-          <p className="mb-6"><strong>Samochody hybrydowe</strong> to coraz popularniejszy wybór na rynku motoryzacyjnym. Łączą silnik spalinowy z elektrycznym, oferując niższe <strong>spalanie paliwa</strong> i mniejszą emisję spalin. Jakie rodzaje <strong>napędów hybrydowych</strong> istnieją i czym się różnią? W tym artykule wyjaśnimy wszystko, co musisz wiedzieć, i pokażemy, jak nasz <strong>kalkulator spalania paliwa</strong> pomoże Ci obliczyć <strong>koszty paliwa</strong> dla hybrydy!</p>
+          <p className="mb-6"><strong>Samochody hybrydowe</strong> to coraz popularniejszy wybór na rynku motoryzacyjnym. Łączą silnik spalinowy z elektrycznym, oferując niższe <strong>spalanie paliwa</strong> i mniejszą emisję spalin. Jakie rodzaje <strong>napędów hybrydowych</strong> istnieją i czym się różnią? W tym artykule wyjaśnimy wszystko, co musisz wiedzieć, i pokażemy, jak nasz <Link to="/" className="text-blue-600 hover:underline">kalkulator spalania paliwa na stronie głównej</Link> pomoże Ci obliczyć <strong>koszty paliwa</strong> dla hybrydy!</p>
           
           <Separator className="my-8" />
           
@@ -101,7 +101,7 @@ const Hybryda = () => {
               </ul>
             </li>
           </ol>
-          <p className="mb-6">Niezależnie od typu, bateria ładuje się podczas hamowania, zamieniając energię kinetyczną na elektryczną zamiast tracić ją na ciepło. To klucz do <strong>oszczędności paliwa</strong> w hybrydach!</p>
+          <p className="mb-6">Niezależnie od typu, bateria ładuje się podczas hamowania, zamieniając energię kinetyczną na elektryczną zamiast tracić ją na ciepło. To klucz do <strong>oszczędności paliwa</strong> w hybrydach! Jeśli porównujesz zużycie paliw w różnych typach silników, sprawdź także nasze artykuły o <Link to="/diesel" className="text-blue-600 hover:underline">silnikach Diesla</Link> i <Link to="/lpg" className="text-blue-600 hover:underline">instalacjach LPG</Link>.</p>
           
           <Separator className="my-8" />
           
@@ -148,7 +148,7 @@ const Hybryda = () => {
               <p>2013: ponad 3 miliony sztuk.</p>
             </li>
           </ul>
-          <p className="mb-6"><strong>Spalanie paliwa</strong> w Priusie I generacji wynosiło 4,5 l/100 km w mieście i 5,2 l/100 km poza miastem. Dla porównania, Honda Insight (1999, częściowa hybryda równoległa) zużywała 3,9 l/100 km w mieście i 3,5 l/100 km na trasie. Dziś Prius osiąga zaledwie 3,9 l/100 km w mieście, oferując większą moc i niższą emisję CO2. To dowód, że <strong>napęd hybrydowy</strong> stale się rozwija!</p>
+          <p className="mb-6"><strong>Spalanie paliwa</strong> w Priusie I generacji wynosiło 4,5 l/100 km w mieście i 5,2 l/100 km poza miastem. Dla porównania, Honda Insight (1999, częściowa hybryda równoległa) zużywała 3,9 l/100 km w mieście i 3,5 l/100 km na trasie. Dziś Prius osiąga zaledwie 3,9 l/100 km w mieście, oferując większą moc i mniejszą emisję CO2. To dowód, że <strong>napęd hybrydowy</strong> stale się rozwija!</p>
           
           <Separator className="my-8" />
           

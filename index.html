@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -66,11 +67,84 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- Add critical CSS inline for faster render -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body {
+        font-family: 'Lato', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      
+      /* Fallback content styling */
+      #fallback-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        display: none;
+      }
+      
+      /* Show fallback content if JS fails to load */
+      .js-failed #fallback-content {
+        display: block;
+      }
+      
+      /* Basic styling for noscript fallback */
+      noscript div {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+    </style>
+    
     <meta name="google-site-verification" content="6s2uP1_JPnxuVW_ewp1HGbFx577WJujWlDVeZTtG3RI" />
   </head>
 
   <body>
     <div id="root"></div>
+    
+    <!-- Fallback content for SEO and accessibility if JS fails -->
+    <div id="fallback-content">
+      <h1>Kalkulator paliwa – Szybko oblicz zużycie i koszty podróży</h1>
+      <p>
+        Witaj na stronie <strong>Kalkulator paliwa</strong>, darmowego narzędzia online, które umożliwia łatwe obliczenie spalania paliwa i kosztów jazdy Twoim samochodem. 
+        Dzięki naszemu praktycznemu serwisowi sprawdzisz nie tylko średnie spalanie, ale również precyzyjnie zaplanujesz budżet na paliwo przed każdą trasą!
+      </p>
+      <p>
+        <a href="/ekonomiczna-jazda">Ekonomiczna jazda</a> | 
+        <a href="/diesel">Diesel vs Benzyna</a> | 
+        <a href="/lpg">LPG</a> | 
+        <a href="/hybryda">Hybryda</a> | 
+        <a href="/cena-paliwa">Ceny paliw</a>
+      </p>
+    </div>
+    
+    <!-- NoScript fallback for users with JS disabled -->
+    <noscript>
+      <div>
+        <h1>Kalkulator paliwa – Szybko oblicz zużycie i koszty podróży</h1>
+        <p>Ta strona wymaga włączonej obsługi JavaScript, aby działać prawidłowo.</p>
+        <p>
+          <strong>Kalkulator paliwa</strong> to darmowe narzędzie online, które umożliwia łatwe obliczenie spalania paliwa i kosztów jazdy Twoim samochodem.
+          Włącz JavaScript w przeglądarce, aby skorzystać z pełnej funkcjonalności.
+        </p>
+      </div>
+    </noscript>
+    
+    <!-- Script error detection -->
+    <script>
+      // Set a timeout to check if our main script loaded
+      var scriptTimeout = setTimeout(function() {
+        document.body.classList.add('js-failed');
+      }, 3000); // 3 seconds
+      
+      // If the main app loads correctly, clear the timeout
+      window.onAppLoaded = function() {
+        clearTimeout(scriptTimeout);
+      };
+    </script>
+    
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>

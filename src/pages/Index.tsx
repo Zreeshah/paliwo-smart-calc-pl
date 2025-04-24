@@ -42,22 +42,39 @@ const Index = () => {
     }
   };
 
+  const webApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kalkulator Spalania Paliwa",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "PLN"
+    },
+    "featureList": [
+      "Obliczanie spalania paliwa",
+      "Kalkulacja kosztów podróży",
+      "Porównywanie różnych typów paliw",
+      "Szacowanie emisji CO2"
+    ],
+    "url": "https://www.kalkulator-spalaniapaliwa.pl"
+  };
+
   return (
     <>
       <SEOHead
         title="Kalkulator Spalania Paliwa – Oblicz Zużycie i Koszty"
         description="Sprawdź zużycie paliwa i koszty podróży z naszym kalkulatorem spalania paliwa. Prosty, szybki i dokładny – oblicz paliwo już teraz!"
         canonicalPath="/"
-        schemaData={[faqSchemaData, websiteSchemaData]}
+        schemaData={[faqSchemaData, websiteSchemaData, webApplicationSchema]}
       >
-        <script type="application/ld+json">
-          {JSON.stringify(websiteSchemaData)}
-        </script>
       </SEOHead>
       
       <Layout>
         <div>
-          {/* Above the fold, semantic homepage content with SEO keyword */}
           <section className="mb-10">
             <h1 className="text-3xl font-bold mb-4">Kalkulator paliwa – Szybko oblicz zużycie i koszty podróży</h1>
             <p className="text-lg mb-4">
@@ -91,7 +108,6 @@ const Index = () => {
             <FuelCostCalculator />
           </div>
           
-          {/* Featured/Recent Articles for internal linking */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Polecane artykuły</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -119,7 +135,6 @@ const Index = () => {
             </div>
           </section>
           
-          {/* Remaining sections kept for user value/SEO */}
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">Kalkulator Spalania Paliwa dla Twojego Samochodu</h2>
             <p className="mb-4">

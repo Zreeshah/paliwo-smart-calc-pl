@@ -22,12 +22,19 @@ const SEOHead: React.FC<SEOProps> = ({
   const path = canonicalPath || location.pathname;
   const baseUrl = "https://www.kalkulator-spalaniapaliwa.pl";
   const canonical = path === '/' ? baseUrl : `${baseUrl}${path}`;
+  const isHomepage = path === '/';
 
   return (
     <Helmet>
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
       <link rel="canonical" href={canonical} />
+      {isHomepage && description && (
+        <meta 
+          property="og:description" 
+          content={description}
+        />
+      )}
       {schemaData && (
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
@@ -39,3 +46,4 @@ const SEOHead: React.FC<SEOProps> = ({
 };
 
 export default SEOHead;
+

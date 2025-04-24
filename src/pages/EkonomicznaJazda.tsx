@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
 
 const EkonomicznaJazda = () => {
   const articleSchemaData = {
@@ -32,14 +32,13 @@ const EkonomicznaJazda = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Ekonomiczna Jazda – Jak Zmniejszyć Spalanie Paliwa?</title>
-        <meta name="description" content="Poznaj techniki ekonomicznej jazdy i dowiedz się, jak zmniejszyć zużycie paliwa. Praktyczne porady, które pomogą Ci zaoszczędzić na kosztach paliwa." />
-        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/ekonomiczna-jazda" />
-        <script type="application/ld+json">
-          {JSON.stringify(articleSchemaData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Ekonomiczna Jazda – Jak Zmniejszyć Spalanie Paliwa?"
+        description="Poznaj techniki ekonomicznej jazdy i dowiedz się, jak zmniejszyć zużycie paliwa. Praktyczne porady, które pomogą Ci zaoszczędzić na kosztach paliwa."
+        canonicalPath="/ekonomiczna-jazda"
+        schemaData={articleSchemaData}
+      />
+      
       <Layout>
         <main className="max-w-4xl mx-auto">
           <article>

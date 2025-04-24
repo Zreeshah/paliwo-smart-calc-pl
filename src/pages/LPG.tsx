@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
 
 const LPG = () => {
   const articleSchemaData = {
@@ -32,14 +32,13 @@ const LPG = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Co to jest LPG? Wszystko o Płynnym Paliwie Gazowym</title>
-        <meta name="description" content="Dowiedz się wszystkiego o LPG - składzie, właściwościach, zaletach i zastosowaniu płynnego paliwa gazowego. Czy warto zainwestować w instalację LPG?" />
-        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/lpg" />
-        <script type="application/ld+json">
-          {JSON.stringify(articleSchemaData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Co to jest LPG? Wszystko o Płynnym Paliwie Gazowym"
+        description="Dowiedz się wszystkiego o LPG - składzie, właściwościach, zaletach i zastosowaniu płynnego paliwa gazowego. Czy warto zainwestować w instalację LPG?"
+        canonicalPath="/lpg"
+        schemaData={articleSchemaData}
+      />
+      
       <Layout>
         <main className="max-w-4xl mx-auto">
           <article>
@@ -48,6 +47,7 @@ const LPG = () => {
                 Co to jest LPG? Wszystko o Płynnym Paliwie Gazowym
               </h1>
             </header>
+            
             <div className="my-8">
               <img 
                 src={getImagePath("lpg-fuel.jpg")} 

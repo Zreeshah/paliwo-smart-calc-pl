@@ -1,9 +1,10 @@
+
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import FuelConsumptionCalculator from '@/components/FuelConsumptionCalculator';
 import FuelCostCalculator from '@/components/FuelCostCalculator';
 import FAQSection from '@/components/FAQSection';
-import SEOHead from '@/components/SEOHead';
 
 const Index = () => {
   const faqSchemaData = {
@@ -44,16 +45,17 @@ const Index = () => {
 
   return (
     <>
-      <SEOHead
-        title="Kalkulator Spalania Paliwa – Oblicz Zużycie i Koszty"
-        description="Sprawdź zużycie paliwa i koszty podróży z naszym kalkulatorem spalania paliwa. Prosty, szybki i dokładny – oblicz paliwo już teraz!"
-        canonicalPath="/"
-        schemaData={[faqSchemaData, websiteSchemaData]}
-      >
+      <Helmet>
+        <title>Kalkulator Spalania Paliwa – Oblicz Zużycie i Koszty</title>
+        <meta name="description" content="Sprawdź zużycie paliwa i koszty podróży z naszym kalkulatorem spalania paliwa. Prosty, szybki i dokładny – oblicz paliwo już teraz!" />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/" />
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchemaData)}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify(websiteSchemaData)}
         </script>
-      </SEOHead>
+      </Helmet>
       
       <Layout>
         <div>
@@ -176,3 +178,4 @@ const Index = () => {
 };
 
 export default Index;
+

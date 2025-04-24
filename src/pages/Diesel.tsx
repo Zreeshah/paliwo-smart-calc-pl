@@ -1,9 +1,9 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 import { Link } from 'react-router-dom';
-import SEOHead from '@/components/SEOHead';
 
 const Diesel = () => {
   const articleSchemaData = {
@@ -32,13 +32,14 @@ const Diesel = () => {
 
   return (
     <>
-      <SEOHead
-        title="Diesel vs Benzyna – Co Wybrać i Kiedy Się Opłaca?"
-        description="Porównanie silników diesla i benzynowych. Dowiedz się, kiedy warto wybrać diesel, a kiedy lepszą opcją będzie silnik benzynowy. Koszty eksploatacji i różnice."
-        canonicalPath="/diesel"
-        schemaData={articleSchemaData}
-      />
-      
+      <Helmet>
+        <title>Diesel vs Benzyna – Co Wybrać i Kiedy Się Opłaca?</title>
+        <meta name="description" content="Porównanie silników diesla i benzynowych. Dowiedz się, kiedy warto wybrać diesel, a kiedy lepszą opcją będzie silnik benzynowy. Koszty eksploatacji i różnice." />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/diesel" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchemaData)}
+        </script>
+      </Helmet>
       <Layout>
         <main className="max-w-4xl mx-auto">
           <article>

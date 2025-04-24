@@ -1,9 +1,9 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 import { Link } from 'react-router-dom';
-import SEOHead from '@/components/SEOHead';
 
 const CenaPaliwa = () => {
   const articleSchemaData = {
@@ -32,13 +32,14 @@ const CenaPaliwa = () => {
 
   return (
     <>
-      <SEOHead
-        title="Od Czego Zależy Cena Paliwa? Poznaj Kluczowe Czynniki"
-        description="Dowiedz się, od czego zależy cena paliwa w Polsce. Poznaj czynniki wpływające na ceny benzyny, diesla i LPG oraz jak możesz zaoszczędzić na tankowaniu."
-        canonicalPath="/cena-paliwa"
-        schemaData={articleSchemaData}
-      />
-      
+      <Helmet>
+        <title>Od Czego Zależy Cena Paliwa? Poznaj Kluczowe Czynniki</title>
+        <meta name="description" content="Dowiedz się, od czego zależy cena paliwa w Polsce. Poznaj czynniki wpływające na ceny benzyny, diesla i LPG oraz jak możesz zaoszczędzić na tankowaniu." />
+        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/cena-paliwa" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchemaData)}
+        </script>
+      </Helmet>
       <Layout>
         <main className="max-w-4xl mx-auto">
           <article>
@@ -61,7 +62,7 @@ const CenaPaliwa = () => {
             <Separator className="my-8" />
             
             <h3 className="text-xl font-medium mb-4 text-gray-700">1. Ceny Ropy Naftowej na Świecie</h3>
-            <p className="mb-4"><strong>Ropa naftowa</strong> to podstawowy surowiec, z którego wytwarza się paliwa. Jej ceny są notowane na światowych giełdach i podlegają ciągłym wahaniom. Wp��ywają na nie:</p>
+            <p className="mb-4"><strong>Ropa naftowa</strong> to podstawowy surowiec, z którego wytwarza się paliwa. Jej ceny są notowane na światowych giełdach i podlegają ciągłym wahaniom. Wpływają na nie:</p>
             <ul className="list-disc pl-6 space-y-2 my-4">
               <li>
                 <p><strong>Sytuacja geopolityczna</strong>: Konflikty zbrojne, napięcia polityczne i decyzje OPEC (Organizacja Krajów Eksportujących Ropę Naftową) mają bezpośredni wpływ na podaż i popyt ropy.</p>

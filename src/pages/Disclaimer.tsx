@@ -1,16 +1,16 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
-import SEOHead from '@/components/SEOHead';
 
 const Disclaimer = () => {
   return (
     <>
-      <SEOHead
-        title="Zastrzeżenie Prawne - Kalkulator Spalania Paliwa"
-        description="Informacje prawne dotyczące korzystania z kalkulatora spalania paliwa na stronie kalkulator-spalaniapaliwa.pl"
-        canonicalPath="/zastrzezenie-prawne"
-      />
+      <Helmet>
+        <title>Zastrzeżenie Prawne - Kalkulator Spalania Paliwa</title>
+        <meta name="description" content="Informacje prawne dotyczące korzystania z kalkulatora spalania paliwa na stronie kalkulator-spalaniapaliwa.pl" />
+        <link rel="canonical" href="https://kalkulator-spalaniapaliwa.pl/zastrzezenie-prawne" />
+      </Helmet>
       
       <Layout>
         <div className="max-w-4xl mx-auto">

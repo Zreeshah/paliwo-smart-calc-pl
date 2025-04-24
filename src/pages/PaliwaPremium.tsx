@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
 import { getImagePath } from '@/utils/imagePaths';
 import { Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
 
 const PaliwaPremium = () => {
   const articleSchemaData = {
@@ -32,14 +33,13 @@ const PaliwaPremium = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Paliwa Premium – Czy Warto Tankować Benzynę o Wyższej Liczbie Oktanowej?</title>
-        <meta name="description" content="Dowiedz się, czy warto tankować paliwa premium jak PB98. Porównaj różnice między benzynami, sprawdź zalety i wady paliw o wyższej liczbie oktanowej." />
-        <link rel="canonical" href="https://www.kalkulator-spalaniapaliwa.pl/paliwa-premium" />
-        <script type="application/ld+json">
-          {JSON.stringify(articleSchemaData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Paliwa Premium – Czy Warto Tankować Benzynę o Wyższej Liczbie Oktanowej?"
+        description="Dowiedz się, czy warto tankować paliwa premium jak PB98. Porównaj różnice między benzynami, sprawdź zalety i wady paliw o wyższej liczbie oktanowej."
+        canonicalPath="/paliwa-premium"
+        schemaData={articleSchemaData}
+      />
+      
       <Layout>
         <main className="max-w-4xl mx-auto">
           <article>

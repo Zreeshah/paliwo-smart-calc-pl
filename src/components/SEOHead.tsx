@@ -7,7 +7,7 @@ interface SEOProps {
   title?: string;
   description?: string;
   canonicalPath?: string;
-  schemaData?: object;
+  schemaData?: object | Array<object>;
   children?: React.ReactNode;
 }
 
@@ -28,6 +28,7 @@ const SEOHead: React.FC<SEOProps> = ({
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
       <link rel="canonical" href={canonical} />
+      {description && path === '/' && <meta property="og:description" content={description} />}
       {schemaData && (
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}

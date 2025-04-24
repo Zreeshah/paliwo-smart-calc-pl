@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
 
 const NotFound = () => {
   const location = useLocation();
@@ -17,11 +17,13 @@ const NotFound = () => {
 
   return (
     <>
-      <Helmet>
-        <title>404: Strona Nie Znaleziona - Kalkulator Spalania Paliwa</title>
-        <meta name="description" content="Strona, której szukasz nie istnieje. Wróć do kalkulatora spalania paliwa." />
+      <SEOHead
+        title="404: Strona Nie Znaleziona - Kalkulator Spalania Paliwa"
+        description="Strona, której szukasz nie istnieje. Wróć do kalkulatora spalania paliwa."
+        canonicalPath="/404"
+      >
         <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      </SEOHead>
       
       <Layout>
         <div className="min-h-[60vh] flex items-center justify-center">

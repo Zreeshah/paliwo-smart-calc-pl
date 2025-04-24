@@ -1,16 +1,16 @@
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/Layout';
+import SEOHead from '@/components/SEOHead';
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Helmet>
-        <title>Polityka Prywatności - Kalkulator Spalania Paliwa</title>
-        <meta name="description" content="Informacje o polityce prywatności na stronie kalkulator-spalaniapaliwa.pl" />
-        <link rel="canonical" href="https://kalkulator-spalaniapaliwa.pl/polityka-prywatnosci" />
-      </Helmet>
+      <SEOHead
+        title="Polityka Prywatności - Kalkulator Spalania Paliwa"
+        description="Informacje o polityce prywatności na stronie kalkulator-spalaniapaliwa.pl"
+        canonicalPath="/polityka-prywatnosci"
+      />
       
       <Layout>
         <div className="max-w-4xl mx-auto">

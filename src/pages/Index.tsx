@@ -188,10 +188,13 @@ const Index = () => {
           
           {/* External link - visually hidden but present in HTML */}
           <div style={{ position: 'absolute', width: '1px', height: '1px', padding: '0', margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: '0' }} aria-hidden="true">
-            <a href="https://greenbrand.pl" target="_blank" title="Wyszukiwarka firm" rel="nofollow">
+            <a href="https://greenbrand.pl" target="_blank" title="Wyszukiwarka firm">
               <img src="https://www.greenbrand.pl/antipixel.png" alt="Wyszukiwarka firm" />
             </a>
           </div>
+          
+          {/* Static HTML comment that will be present in the source code */}
+          <div dangerouslySetInnerHTML={{ __html: '<!-- Wyszukiwarka firm: <a href="https://greenbrand.pl" target="_blank" title="Wyszukiwarka firm"><img src="https://www.greenbrand.pl/antipixel.png" alt="Wyszukiwarka firm" /></a> -->' }} />
         </div>
       </Layout>
     </>

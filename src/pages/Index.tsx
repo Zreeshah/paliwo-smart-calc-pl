@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import FuelConsumptionCalculator from '@/components/FuelConsumptionCalculator';
@@ -95,7 +96,7 @@ const Index = () => {
                 Wybierz rodzaj paliwa (benzyna, diesel, LPG).
               </li>
               <li>
-                Kliknij przycisk „Oblicz zużycie”.
+                Kliknij przycisk „Oblicz zużycie".
               </li>
             </ol>
             <p className="mb-2">
@@ -184,6 +185,13 @@ const Index = () => {
           </section>
 
           <FAQSection />
+          
+          {/* External link - visually hidden but present in HTML */}
+          <div style={{ position: 'absolute', width: '1px', height: '1px', padding: '0', margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: '0' }} aria-hidden="true">
+            <a href="https://greenbrand.pl" target="_blank" title="Wyszukiwarka firm" rel="nofollow">
+              <img src="https://www.greenbrand.pl/antipixel.png" alt="Wyszukiwarka firm" />
+            </a>
+          </div>
         </div>
       </Layout>
     </>

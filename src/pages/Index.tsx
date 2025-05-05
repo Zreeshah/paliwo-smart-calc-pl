@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import FuelConsumptionCalculator from '@/components/FuelConsumptionCalculator';
@@ -186,15 +185,12 @@ const Index = () => {
 
           <FAQSection />
           
-          {/* External link - visually hidden but present in HTML */}
-          <div style={{ position: 'absolute', width: '1px', height: '1px', padding: '0', margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: '0' }} aria-hidden="true">
-            <a href="https://greenbrand.pl" target="_blank" title="Wyszukiwarka firm">
-              <img src="https://www.greenbrand.pl/antipixel.png" alt="Wyszukiwarka firm" />
+          {/* Partner link - visible at the bottom of the page */}
+          <div className="mt-8 mb-4 text-center text-sm text-gray-500">
+            <a href="https://greenbrand.pl" target="_blank" title="Wyszukiwarka firm" className="inline-block">
+              <img src="https://www.greenbrand.pl/antipixel.png" alt="Wyszukiwarka firm" className="h-8" />
             </a>
           </div>
-          
-          {/* Static HTML comment that will be present in the source code */}
-          <div dangerouslySetInnerHTML={{ __html: '<!-- Wyszukiwarka firm: <a href="https://greenbrand.pl" target="_blank" title="Wyszukiwarka firm"><img src="https://www.greenbrand.pl/antipixel.png" alt="Wyszukiwarka firm" /></a> -->' }} />
         </div>
       </Layout>
     </>

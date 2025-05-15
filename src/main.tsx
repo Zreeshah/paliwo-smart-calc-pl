@@ -1,5 +1,6 @@
 
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 import './index.css'
 
@@ -11,11 +12,20 @@ const rootElement = document.getElementById("root");
 
 // Only proceed if we found the root element
 if (rootElement) {
-  createRoot(rootElement).render(
-    <Suspense fallback={<div className="flex h-screen items-center justify-center">Ładowanie...</div>}>
-      <App />
-    </Suspense>
+  const app = (
+    <BrowserRouter>
+      <Suspense fallback={<div className="flex h-screen items-center justify-center">Ładowanie...</div>}>
+        <App />
+      </Suspense>
+    </BrowserRouter>
   );
+
+  // Use hydration for SSR in production
+  if (import.meta.env.PROD) {
+    hydrateRoot(rootElement, app);
+  } else {
+    createRoot(rootElement).render(app);
+  }
 
   // Signal that the app has loaded successfully
   if (window.onAppLoaded && typeof window.onAppLoaded === 'function') {
